@@ -11,8 +11,9 @@ open class ListItem(
     val viewType: Enum<*> = DefaultViewType.EMPTY
 ) {
     private var adjustedId: String? = null
-    val stableId
-        get() = (adjustedId ?: id).hashCode().toLong() // Created to prevent public `id` mutability
+
+    // Created to prevent public `id` mutability
+    val stableId get() = (adjustedId ?: id).hashCode().toLong()
 
     fun adjustId(index: Int): ListItem {
         if (adjustedId == null) {
