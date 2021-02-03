@@ -1,6 +1,6 @@
 apply plugin: 'com.jfrog.bintray'
 
-def libVersion = "0.6"
+def libVersion = "1.0.0-rc-1"
 version = libVersion
 
 if (project.hasProperty("kotlin")) { //Kotlin libraries

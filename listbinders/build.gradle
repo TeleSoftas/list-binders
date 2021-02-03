@@ -6,7 +6,7 @@ apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven-publish'
 apply plugin: 'org.jetbrains.dokka-android'
 
-def libVersion = "0.6"
+def libVersion = "1.0.0-rc-1"
 
 android {
     compileSdkVersion 29

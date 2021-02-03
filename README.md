@@ -4,6 +4,8 @@
 
 Use either SingleViewTypeAdapter to create simple lists, or MultiViewTypeAdapter for lists with multiple view types.
 
+See "sample" for usage tutorial. 
+
 ## TODO
 
 - Provide overridable DefaultItemCallback for each item
