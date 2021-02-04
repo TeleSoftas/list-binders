@@ -1,5 +1,7 @@
 package com.liusbl.listbinders
 
+import com.liusbl.listbinders.exception.AnonymousListItemException
+
 /**
  * All single view type list items must extend this class to provide stable ids.
  *
@@ -7,12 +9,12 @@ package com.liusbl.listbinders
  * @param viewType Enum that is associated with the list item view type
  */
 open class ListItem(private val id: String?) {
-    private val viewType = this::class.simpleName?.hashCode()
-        ?: error("This can never be an anonymous class")
-
+    private val viewType = this::class.simpleName?.hashCode() ?: throw AnonymousListItemException()
     private var adjustedId: String? = null
 
-    // Created to prevent public `id` mutability
+    /**
+     * Created to prevent public `id` mutability
+     */
     val stableId get() = (adjustedId ?: id).hashCode().toLong()
 
     fun adjustId(index: Int): ListItem {
