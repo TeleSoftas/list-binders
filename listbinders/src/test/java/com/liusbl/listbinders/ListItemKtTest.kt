@@ -1,9 +1,11 @@
 package com.liusbl.listbinders
 
 import com.liusbl.listbinders.ListItemKtTest.SomeListItem.*
-import org.junit.Assert
+import com.liusbl.listbinders.exception.AnonymousListItemException
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.assertThrows
 
 @DisplayName("ListItem")
 class ListItemKtTest {
@@ -34,7 +36,15 @@ class ListItemKtTest {
             -314047691L,
             -877735356L
         )
-        Assert.assertEquals(expected, actual)
+        assertEquals(expected, actual)
+    }
+
+    @Test
+    @DisplayName("AnonymousListItemException is thrown when anonymous ListItem is created")
+    fun `throw Exception when anonymous ListItem is created`() {
+        assertThrows<AnonymousListItemException> {
+            object : ListItem("anything") {}
+        }
     }
 
     private sealed class SomeListItem(id: String?) : ListItem(id) {
