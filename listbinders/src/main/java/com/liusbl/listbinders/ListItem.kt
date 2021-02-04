@@ -9,7 +9,7 @@ import com.liusbl.listbinders.exception.AnonymousListItemException
  * @param viewType Enum that is associated with the list item view type
  */
 open class ListItem(private val id: String?) {
-    private val viewType = this::class.simpleName?.hashCode() ?: throw AnonymousListItemException()
+    private val viewType = this::class.simpleName ?: throw AnonymousListItemException()
     private var adjustedId: String? = null
 
     /**
@@ -28,7 +28,7 @@ open class ListItem(private val id: String?) {
         return this
     }
 
-    private fun createIdFromIndex(viewType: Int, index: Int) =
+    private fun createIdFromIndex(viewType: String, index: Int) =
         "viewType_${viewType}__INDEX_$index"
 
     /**
@@ -38,7 +38,7 @@ open class ListItem(private val id: String?) {
      * Therefore, we can just return the previous id,
      * since it will be the same for all "instances" of the `object`
      */
-    private fun createIdFromViewType(viewType: Int): String {
+    private fun createIdFromViewType(viewType: String): String {
         val objectClassSignature = "viewType_${viewType}__INDEX_"
         val isObject = id!!.contains(objectClassSignature)
         return if (isObject || adjustedId != null) {
