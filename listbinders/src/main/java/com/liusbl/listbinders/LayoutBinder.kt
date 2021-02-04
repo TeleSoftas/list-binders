@@ -1,5 +1,7 @@
 package com.liusbl.listbinders
 
+import kotlin.reflect.KClass
+
 /**
  * LayoutBinder provides ItemBinder logic for a specific layout
  *
@@ -8,5 +10,7 @@ package com.liusbl.listbinders
  */
 abstract class LayoutBinder<T : ListItem>(
     val itemLayout: Int,
-    val viewType: Enum<*>
-) : ItemBinder<T>
+    kClass: KClass<T>
+) : ItemBinder<T> {
+    val viewType: Int = kClass.simpleName.hashCode()
+}

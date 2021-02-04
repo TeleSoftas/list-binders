@@ -6,10 +6,10 @@ package com.liusbl.listbinders
  * @param id unique item identifier
  * @param viewType Enum that is associated with the list item view type
  */
-open class ListItem(
-    private val id: String?,
-    val viewType: Enum<*> = DefaultViewType.EMPTY
-) {
+open class ListItem(private val id: String?) {
+    private val viewType = this::class.simpleName?.hashCode()
+        ?: error("This can never be an anonymous class")
+
     private var adjustedId: String? = null
 
     // Created to prevent public `id` mutability
@@ -17,8 +17,6 @@ open class ListItem(
 
     fun adjustId(index: Int): ListItem {
         if (adjustedId == null) {
-            val viewType = viewType.name
-
             adjustedId = if (id == null) {
                 createIdFromIndex(viewType, index)
             } else {
@@ -28,7 +26,7 @@ open class ListItem(
         return this
     }
 
-    private fun createIdFromIndex(viewType: String, index: Int) =
+    private fun createIdFromIndex(viewType: Int, index: Int) =
         "viewType_${viewType}__INDEX_$index"
 
     /**
@@ -38,7 +36,7 @@ open class ListItem(
      * Therefore, we can just return the previous id,
      * since it will be the same for all "instances" of the `object`
      */
-    private fun createIdFromViewType(viewType: String): String {
+    private fun createIdFromViewType(viewType: Int): String {
         val objectClassSignature = "viewType_${viewType}__INDEX_"
         val isObject = id!!.contains(objectClassSignature)
         return if (isObject || adjustedId != null) {
@@ -46,10 +44,6 @@ open class ListItem(
         } else {
             "viewType_${viewType}__ID_${id}"
         }
-    }
-
-    enum class DefaultViewType {
-        EMPTY
     }
 }
 

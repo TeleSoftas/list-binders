@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
+import com.liusbl.listbinders.exception.BinderNotFoundException
 
 /**
  * Provides simplified way to implement list with multiple view types
@@ -19,7 +20,7 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
 
     @Suppress("UNCHECKED_CAST")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BinderViewHolder<T> {
-        val binder = binderList.firstOrNull { it.viewType.ordinal == viewType }
+        val binder = binderList.firstOrNull { it.viewType == viewType }
             ?: throw BinderNotFoundException(viewType, binderList)
         val inflater = LayoutInflater.from(parent.context)
         val itemView = inflater.inflate(binder.itemLayout, parent, false)
@@ -39,12 +40,14 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
      * When using multiple viewTypes, getItemViewType must be implemented.
      * Here we provide the Enum value.
      */
-    override fun getItemViewType(position: Int) = currentList[position].viewType.ordinal
+    override fun getItemViewType(position: Int): Int =
+        currentList[position]::class.simpleName.hashCode()
 
     /**
      * Providing stableId values allows some viewHolder optimizations
      */
-    override fun getItemId(position: Int) = currentList[position].viewType.ordinal.toLong()
+    override fun getItemId(position: Int) =
+        currentList[position]::class.simpleName.hashCode().toLong()
 
     /**
      * This should be used instead of directly calling ListAdapter#submitList

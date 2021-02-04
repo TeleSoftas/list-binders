@@ -4,9 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.liusbl.listbinders.BinderViewHolder
+import com.liusbl.listbinders.LayoutBinder
+import com.liusbl.listbinders.ListItem
 import com.liusbl.listbinders.MultiViewTypeAdapter
 import com.liusbl.listbinderssample.R
+import com.liusbl.listbinderssample.multi.PersonListItem.Person
 import kotlinx.android.synthetic.main.activity_multi.*
+import kotlinx.android.synthetic.main.item_multi_person.*
 
 class MultiActivity : AppCompatActivity(), MultiView {
     private val adapter by lazy { PersonAdapter() }
