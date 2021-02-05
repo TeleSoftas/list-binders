@@ -53,7 +53,7 @@ bintray {
         repo = "list-binders"
         name = "com.liusbl.libraries:listbinders"
         desc = "A RecyclerView wrapper providing an easy solution for complicated lists"
-        vcsUrl = "https://github.com/liusbl/List-Binders"
+        vcsUrl = "https://github.com/TeleSoftas/list-binders"
         licenses = ['Apache-2.0']
         publish = true
         publicDownloadNumbers = true
