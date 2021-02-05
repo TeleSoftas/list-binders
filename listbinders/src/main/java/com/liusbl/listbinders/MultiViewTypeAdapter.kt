@@ -49,6 +49,21 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
     override fun getItemId(position: Int) =
         currentList[position]::class.simpleName.hashCode().toLong()
 
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
+     */
+    override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
+        viewHolder.onViewAttachedToWindow()
+    }
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewDetachedFromWindow
+     */
+    override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
+        viewHolder.onViewDetachedFromWindow()
+    }
+
     /**
      * This should be used instead of directly calling ListAdapter#submitList
      *

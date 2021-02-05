@@ -36,6 +36,20 @@ abstract class SingleViewTypeAdapter<T : ListItem> protected constructor(
     override fun getItemId(position: Int) = currentList[position]!!.stableId
 
     /**
+     * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
+     */
+    override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
+        viewHolder.onViewAttachedToWindow()
+    }
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewDetachedFromWindow
+     */
+    override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
+        viewHolder.onViewDetachedFromWindow()
+    }
+
+    /**
      * This should be used instead of directly calling ListAdapter#submitList
      *
      * Recreating the list with "toList()" is necessary,

@@ -45,4 +45,18 @@ class BinderViewHolder<T : ListItem>(
         this.item = item
         binder.onBind(this, item)
     }
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
+     */
+    fun onViewAttachedToWindow() {
+        binder.onViewAttachedToWindow(this)
+    }
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
+     */
+    fun onViewDetachedFromWindow() {
+        binder.onViewDetachedFromWindow(this)
+    }
 }

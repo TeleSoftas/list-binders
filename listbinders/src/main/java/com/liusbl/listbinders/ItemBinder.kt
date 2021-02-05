@@ -23,4 +23,18 @@ interface ItemBinder<T : ListItem> {
     fun onBind(viewHolder: BinderViewHolder<T>, item: T) {
         // Empty
     }
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
+     */
+    fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
+        // Empty
+    }
+
+    /**
+     * Adapter for RecyclerView.Adapter#onViewDetachedFromWindow
+     */
+    fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
+        // Empty
+    }
 }
