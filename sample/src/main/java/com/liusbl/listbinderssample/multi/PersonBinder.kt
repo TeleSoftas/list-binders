@@ -1,5 +1,6 @@
 package com.liusbl.listbinderssample.multi
 
+import android.util.Log
 import com.liusbl.listbinders.BinderViewHolder
 import com.liusbl.listbinders.LayoutBinder
 import com.liusbl.listbinderssample.R
@@ -17,5 +18,13 @@ class PersonBinder : LayoutBinder<Person>(R.layout.item_multi_person, Person::cl
             .alpha(1f)
             .start()
         viewHolder.nameTextView.text = item.name
+    }
+
+    override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<Person>) {
+        Log.d("TESTING", "Person onViewAttachedToWindow")
+    }
+
+    override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<Person>) {
+        Log.d("TESTING", "Person onViewDetachedFromWindow")
     }
 }

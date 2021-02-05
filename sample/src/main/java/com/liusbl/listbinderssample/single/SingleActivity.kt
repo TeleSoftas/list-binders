@@ -3,10 +3,12 @@ package com.liusbl.listbinderssample.single
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.liusbl.listbinders.BinderViewHolder
 import com.liusbl.listbinders.SingleViewTypeAdapter
 import com.liusbl.listbinderssample.R
+import com.liusbl.listbinderssample.multi.PersonListItem
 import kotlinx.android.synthetic.main.activity_single.*
 import kotlinx.android.synthetic.main.item_single_person.view.*
 
@@ -51,6 +53,14 @@ class SingleActivity : AppCompatActivity() {
                 .alpha(1f)
                 .start()
             viewHolder.itemView.nameTextView.text = item.name
+        }
+
+        override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<Person>) {
+            Log.d("TESTING", "Single Person onViewAttachedToWindow")
+        }
+
+        override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<Person>) {
+            Log.d("TESTING", "Single Person onViewDetachedFromWindow")
         }
     }
 

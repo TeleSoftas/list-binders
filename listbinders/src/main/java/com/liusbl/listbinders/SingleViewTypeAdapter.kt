@@ -39,14 +39,14 @@ abstract class SingleViewTypeAdapter<T : ListItem> protected constructor(
      * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
      */
     override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
-        viewHolder.onViewAttachedToWindow()
+        // Empty
     }
 
     /**
      * Adapter for RecyclerView.Adapter#onViewDetachedFromWindow
      */
     override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
-        viewHolder.onViewDetachedFromWindow()
+        // Empty
     }
 
     /**
