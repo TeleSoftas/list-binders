@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.liusbl.listbinders.BinderViewHolder
 import com.liusbl.listbinders.SingleViewTypeAdapter
 import com.liusbl.listbinderssample.R
-import com.liusbl.listbinderssample.multi.PersonListItem
 import kotlinx.android.synthetic.main.activity_single.*
 import kotlinx.android.synthetic.main.item_single_person.view.*
 
