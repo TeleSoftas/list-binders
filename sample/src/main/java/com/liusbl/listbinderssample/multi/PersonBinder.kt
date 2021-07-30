@@ -27,4 +27,8 @@ class PersonBinder : LayoutBinder<Person>(R.layout.item_multi_person, Person::cl
     override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<Person>) {
         Log.d("TESTING", "Person onViewDetachedFromWindow")
     }
+
+    override fun onViewRecycled(viewHolder: BinderViewHolder<Person>) {
+        Log.d("TESTING", "Person onViewRecycled")
+    }
 }

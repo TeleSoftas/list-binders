@@ -50,6 +50,13 @@ abstract class SingleViewTypeAdapter<T : ListItem> protected constructor(
     }
 
     /**
+     * Adapter for RecyclerView.Adapter#onViewRecycled
+     */
+    override fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
+        // Empty
+    }
+
+    /**
      * This should be used instead of directly calling ListAdapter#submitList
      *
      * Recreating the list with "toList()" is necessary,
