@@ -46,8 +46,7 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
     /**
      * Providing stableId values allows some viewHolder optimizations
      */
-    override fun getItemId(position: Int) =
-        currentList[position]::class.simpleName.hashCode().toLong()
+    override fun getItemId(position: Int) = currentList[position].stableId
 
 
     /**
