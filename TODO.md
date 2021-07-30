@@ -1,7 +1,5 @@
 ## TODO
 
-- More flexibility with overriding ItemCallback
-
 - Documentation improvements
 
 - Check what should be internal

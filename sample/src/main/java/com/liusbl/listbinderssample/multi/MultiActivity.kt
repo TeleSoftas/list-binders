@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DiffUtil
 import com.liusbl.listbinders.BinderViewHolder
 import com.liusbl.listbinders.LayoutBinder
 import com.liusbl.listbinders.ListItem
