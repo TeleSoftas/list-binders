@@ -1,7 +1,7 @@
 //apply plugin: 'com.github.dcendents.android-maven'
 //apply plugin: 'com.jfrog.bintray'
 //
-//group = "com.liusbl.libraries"
+//group = "com.telesoftas.libraries"
 //
 //install {
 //    repositories.mavenInstaller {
@@ -9,7 +9,7 @@
 //            name 'listbinders'
 //            packaging 'aar'
 //            description 'A RecyclerView wrapper providing an easy solution for complicated lists'
-//            url 'https://github.com/liusbl/List-Binders'
+//            url 'https://github.com/TeleSoftas/list-binders'
 //
 //            licenses {
 //                license {
@@ -20,16 +20,16 @@
 //
 ////            developers {
 ////                developer {
-////                    id 'liusbl'
-////                    name 'liusbl'
+////                    id 'telesoftas'
+////                    name 'telesoftas'
 ////                    email 'some@somemail.com'
 ////                }
 ////            }
 //
 //            scm {
-//                url 'https://github.com/liusbl/List-Binders'
-//                connection 'https://github.com/liusbl/List-Binders.git'
-//                developerConnection 'https://github.com/liusbl/List-Binders.git'
+//                url 'https://github.com/TeleSoftas/list-binders'
+//                connection 'https://github.com/TeleSoftas/list-binders.git'
+//                developerConnection 'https://github.com/TeleSoftas/list-binders.git'
 //            }
 //        }
 //    }
@@ -62,8 +62,8 @@
 //    pkg {
 //        repo = "maven"
 //        name = "listbinders"
-//        websiteUrl = 'https://github.com/liusbl/List-Binders'
-//        vcsUrl = 'https://github.com/liusbl/List-Binders.git'
+//        websiteUrl = 'https://github.com/TeleSoftas/list-binders'
+//        vcsUrl = 'https://github.com/TeleSoftas/list-binders.git'
 //        licenses = ["Apache-2.0"]
 //        publish = true
 //    }

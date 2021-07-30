@@ -1,6 +1,6 @@
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = "com.liusbl.libraries"                               // Maven Group ID for the artifact
+group = "com.telesoftas.libraries"                               // Maven Group ID for the artifact
 
 install {
     repositories.mavenInstaller {
@@ -8,13 +8,13 @@ install {
         pom {
             project {
                 packaging 'aar'
-                groupId "com.liusbl.libraries"
+                groupId "com.telesoftas.libraries"
                 artifactId "listbinders"
 
                 // Add your description here
                 name "listbinders"
                 description "libraryDescription"
-                url "https://github.com/liusbl/List-Binders"
+                url "https://github.com/TeleSoftas/list-binders"
 
                 // Set your license
                 licenses {
@@ -31,9 +31,9 @@ install {
 //                    }
 //                }
                 scm {
-                    url 'https://github.com/liusbl/List-Binders'
-                    connection 'https://github.com/liusbl/List-Binders.git'
-                    developerConnection 'https://github.com/liusbl/List-Binders.git'
+                    url 'https://github.com/TeleSoftas/list-binders'
+                    connection 'https://github.com/TeleSoftas/list-binders.git'
+                    developerConnection 'https://github.com/TeleSoftas/list-binders.git'
                 }
             }
         }

@@ -51,7 +51,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "list-binders"
-        name = "com.liusbl.libraries:listbinders"
+        name = "com.telesoftas.libraries:listbinders"
         desc = "A RecyclerView wrapper providing an easy solution for complicated lists"
         vcsUrl = "https://github.com/TeleSoftas/list-binders"
         licenses = ['Apache-2.0']

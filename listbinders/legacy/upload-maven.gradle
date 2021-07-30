@@ -1,7 +1,7 @@
 //apply plugin: 'maven'
 //apply plugin: 'signing'
 //
-//group = "com.liusbl.libraries"
+//group = "com.telesoftas.libraries"
 //
 //configurations.archives {
 //    extendsFrom configurations.default
@@ -34,16 +34,16 @@
 //
 ////            developers {
 ////                developer {
-////                    id 'liusbl'
-////                    name 'liusbl'
+////                    id 'telesoftas'
+////                    name 'telesoftas'
 ////                    email 'some@somemail.com'
 ////                }
 ////            }
 //
 //            scm {
-//                url 'https://github.com/liusbl/List-Binders'
-//                connection 'https://github.com/liusbl/List-Binders.git'
-//                developerConnection 'https://github.com/liusbl/List-Binders.git'
+//                url 'https://github.com/TeleSoftas/list-binders'
+//                connection 'https://github.com/TeleSoftas/list-binders.git'
+//                developerConnection 'https://github.com/TeleSoftas/list-binders.git'
 //            }
 //        }
 //    }

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.liusbl.listbinderssample">
+    package="com.telesoftas.listbinderssample">
 
     <application
         android:allowBackup="false"
@@ -9,14 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name="com.liusbl.listbinderssample.MainActivity">
+        <activity android:name="com.telesoftas.listbinderssample.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.liusbl.listbinderssample.single.SingleActivity" />
-        <activity android:name="com.liusbl.listbinderssample.multi.MultiActivity" />
+        <activity android:name="com.telesoftas.listbinderssample.single.SingleActivity" />
+        <activity android:name="com.telesoftas.listbinderssample.multi.MultiActivity" />
     </application>
 </manifest>
