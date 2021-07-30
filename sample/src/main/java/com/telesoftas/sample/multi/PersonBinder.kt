@@ -1,10 +1,10 @@
-package com.telesoftas.listbinderssample.multi
+package com.telesoftas.sample.multi
 
 import android.util.Log
 import com.telesoftas.listbinders.BinderViewHolder
 import com.telesoftas.listbinders.LayoutBinder
-import com.telesoftas.listbinderssample.R
-import com.telesoftas.listbinderssample.multi.PersonListItem.Person
+import com.telesoftas.sample.R
+import com.telesoftas.sample.multi.PersonListItem.Person
 import kotlinx.android.synthetic.main.item_multi_person.*
 
 class PersonBinder : LayoutBinder<Person>(R.layout.item_multi_person, Person::class) {

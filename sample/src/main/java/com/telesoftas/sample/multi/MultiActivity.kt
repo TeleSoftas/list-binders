@@ -1,18 +1,12 @@
-package com.telesoftas.listbinderssample.multi
+package com.telesoftas.sample.multi
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.DiffUtil
-import com.telesoftas.listbinders.BinderViewHolder
-import com.telesoftas.listbinders.LayoutBinder
-import com.telesoftas.listbinders.ListItem
 import com.telesoftas.listbinders.MultiViewTypeAdapter
-import com.telesoftas.listbinderssample.R
-import com.telesoftas.listbinderssample.multi.PersonListItem.Person
+import com.telesoftas.sample.R
 import kotlinx.android.synthetic.main.activity_multi.*
-import kotlinx.android.synthetic.main.item_multi_person.*
 
 class MultiActivity : AppCompatActivity(), MultiView {
     private val adapter by lazy { PersonAdapter() }

@@ -1,4 +1,4 @@
-package com.telesoftas.listbinderssample.multi
+package com.telesoftas.sample.multi
 
 interface MultiView {
     fun setPersonList(list: List<PersonListItem>)

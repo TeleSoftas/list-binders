@@ -1,4 +1,4 @@
-package com.telesoftas.listbinderssample.single
+package com.telesoftas.sample.single
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.telesoftas.listbinders.BinderViewHolder
 import com.telesoftas.listbinders.SingleViewTypeAdapter
-import com.telesoftas.listbinderssample.R
+import com.telesoftas.sample.R
 import kotlinx.android.synthetic.main.activity_single.*
 import kotlinx.android.synthetic.main.item_single_person.view.*
 

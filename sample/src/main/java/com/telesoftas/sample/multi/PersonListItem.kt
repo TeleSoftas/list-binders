@@ -1,4 +1,4 @@
-package com.telesoftas.listbinderssample.multi
+package com.telesoftas.sample.multi
 
 import com.telesoftas.listbinders.ListItem
 

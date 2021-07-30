@@ -1,9 +1,9 @@
-package com.telesoftas.listbinderssample
+package com.telesoftas.sample
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.telesoftas.listbinderssample.multi.MultiActivity
-import com.telesoftas.listbinderssample.single.SingleActivity
+import com.telesoftas.sample.multi.MultiActivity
+import com.telesoftas.sample.single.SingleActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

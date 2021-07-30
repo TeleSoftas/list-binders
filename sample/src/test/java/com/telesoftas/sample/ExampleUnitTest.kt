@@ -1,4 +1,4 @@
-package com.telesoftas.listbinderssample
+package com.telesoftas.sample
 
 import org.junit.Test
 
