@@ -12,5 +12,7 @@ abstract class LayoutBinder<T : ListItem>(
     val itemLayout: Int,
     kClass: KClass<T>
 ) : ItemBinder<T> {
-    val viewType: Int = kClass.simpleName.hashCode()
+    val viewType: Int = kClass.getViewType()
 }
+
+internal fun <T: Any> KClass<T>.getViewType() = simpleName.hashCode()

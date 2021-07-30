@@ -40,8 +40,7 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
      * When using multiple viewTypes, getItemViewType must be implemented.
      * Here we provide the Enum value.
      */
-    override fun getItemViewType(position: Int): Int =
-        currentList[position]::class.simpleName.hashCode()
+    override fun getItemViewType(position: Int): Int = currentList[position]::class.getViewType()
 
     /**
      * Providing stableId values allows some viewHolder optimizations
