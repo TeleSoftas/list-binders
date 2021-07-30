@@ -1,7 +1,5 @@
 ## TODO
 
-- Force ItemBinder method implementations, perhaps implement ItemBinder in BinderViewHolder
-
 - More flexibility with overriding ItemCallback
 
 - Documentation improvements
