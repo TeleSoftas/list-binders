@@ -36,6 +36,13 @@ abstract class SingleViewTypeAdapter<T : ListItem> protected constructor(
     override fun getItemId(position: Int) = currentList[position]!!.stableId
 
     /**
+     * Adapter for RecyclerView.Adapter#onViewRecycled
+     */
+    override fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
+        // Empty
+    }
+
+    /**
      * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
      */
     override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
@@ -46,13 +53,6 @@ abstract class SingleViewTypeAdapter<T : ListItem> protected constructor(
      * Adapter for RecyclerView.Adapter#onViewDetachedFromWindow
      */
     override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
-        // Empty
-    }
-
-    /**
-     * Adapter for RecyclerView.Adapter#onViewRecycled
-     */
-    override fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
         // Empty
     }
 

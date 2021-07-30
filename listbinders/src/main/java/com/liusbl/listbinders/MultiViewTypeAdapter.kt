@@ -48,6 +48,13 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
     override fun getItemId(position: Int) = currentList[position].stableId
 
     /**
+     * Adapter for RecyclerView.Adapter#onViewRecycled
+     */
+    override fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
+        viewHolder.onViewRecycled()
+    }
+
+    /**
      * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
      */
     override fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
@@ -59,13 +66,6 @@ abstract class MultiViewTypeAdapter<T : ListItem>(
      */
     override fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
         viewHolder.onViewDetachedFromWindow()
-    }
-
-    /**
-     * Adapter for RecyclerView.Adapter#onViewRecycled
-     */
-    override fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
-        viewHolder.onViewRecycled()
     }
 
     /**

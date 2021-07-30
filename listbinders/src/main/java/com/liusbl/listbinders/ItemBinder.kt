@@ -25,6 +25,13 @@ interface ItemBinder<T : ListItem> {
     }
 
     /**
+     * Adapter for RecyclerView.Adapter#onViewRecycled
+     */
+    fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
+        // Empty
+    }
+
+    /**
      * Adapter for RecyclerView.Adapter#onViewAttachedToWindow
      */
     fun onViewAttachedToWindow(viewHolder: BinderViewHolder<T>) {
@@ -35,13 +42,6 @@ interface ItemBinder<T : ListItem> {
      * Adapter for RecyclerView.Adapter#onViewDetachedFromWindow
      */
     fun onViewDetachedFromWindow(viewHolder: BinderViewHolder<T>) {
-        // Empty
-    }
-
-    /**
-     * Adapter for RecyclerView.Adapter#onViewRecycled
-     */
-    fun onViewRecycled(viewHolder: BinderViewHolder<T>) {
         // Empty
     }
 }
