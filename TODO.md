@@ -2,13 +2,9 @@
 
 - Documentation improvements
 
-- Check what should be internal
-
 - Proper placement in Telesoftas domain
 
 - Proper publishing.
-
-- Decide when to call `viewHolder` when `holder`
 
 - Provide overridable DefaultItemCallback for each item
 

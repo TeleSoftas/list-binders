@@ -5,7 +5,7 @@ import com.liusbl.listbinders.LayoutBinder
 /**
  * Exception thrown when not all view types are provided
  */
-class BinderNotFoundException(
+internal class BinderNotFoundException(
     viewType: Int,
     binderList: List<LayoutBinder<*>>
 ) : RuntimeException(
