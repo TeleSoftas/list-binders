@@ -8,4 +8,4 @@ See "sample" for usage tutorial.
 
 To use, add the dependency build.gradle:
 
-    implementation 'com.telesoftas.libraries:listbinders:1.0.0-rc-3'
+    implementation 'io.github.telesoftas.libraries:listbinders:1.0.0-rc-3'
