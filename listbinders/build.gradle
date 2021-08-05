@@ -6,7 +6,7 @@ apply plugin: 'org.jetbrains.dokka-android'
 
 apply plugin: "com.vanniktech.maven.publish"
 
-def libVersion = "1.0.0-rc-3"
+def libVersion = "1.0.0-rc-4"
 
 android {
     compileSdkVersion 30
