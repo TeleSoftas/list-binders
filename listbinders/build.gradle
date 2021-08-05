@@ -2,21 +2,19 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'maven-publish'
 apply plugin: 'org.jetbrains.dokka-android'
+
+apply plugin: "com.vanniktech.maven.publish"
 
 def libVersion = "1.0.0-rc-3"
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
     buildToolsVersion "29.0.3"
 
     defaultConfig {
         minSdkVersion 19
-        targetSdkVersion 29
-        versionCode 1
-        versionName libVersion
+        targetSdkVersion 30
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -58,9 +56,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.3.2'
     testImplementation 'org.junit.vintage:junit-vintage-engine:5.3.2'
 }
-
-apply from: "upload-bintray.gradle"
-apply from: "upload-maven.gradle"
 
 repositories {
     mavenCentral()
